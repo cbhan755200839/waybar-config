@@ -1,0 +1,105 @@
+@import "macchiato.css";
+
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#waybar {
+	background: /*@crust*/ rgba(0, 0, 0, 0);
+  color: @text;
+  font-family: SauceCodePro Nerd Font;
+  font-size: 17px;
+}
+
+#memory,
+#temperature,
+#cpu,
+#pulseaudio,
+#bluetooth,
+#disk,
+#network,
+#tray,
+#custom-power,
+#custom-datetime {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 1rem;
+  background: @surface0;
+}
+
+#tray {
+  margin: 5px;
+  padding: 10px;
+}
+
+#custom-datetime {
+  font-weight: bold;
+}
+
+#network {
+  color: @yellow;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#disk {
+  color: @sapphire;
+}
+
+#bluetooth {
+  color: @blue;
+}
+#bluetooth.disable {
+  color: @red;
+}
+#bluetooth.connected {
+  color: @green;
+}
+
+#pulseaudio {
+  color: @blue;
+}
+#pulseaudio.muted {
+  color: @red;
+}
+
+#cpu {
+  color: @base;
+  background-color: @blue;
+}
+#cpu.warning {
+  background-color: @pink;
+}
+#cpu.critical {
+  background-color: @red;
+}
+
+#temperature {
+  color: @base;
+  background-color: @green;
+}
+#temperature.critical {
+  background-color: @red;
+}
+
+#memory {
+  color: @base;
+  background-color: @sapphire;
+}
+#memory.warning {
+  background-color: @pink;
+}
+#memory.critical {
+  background-color: @red;
+}
+
+#custom-power {
+  color: @base;
+  background-color: @sky
+}

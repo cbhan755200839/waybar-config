@@ -1,105 +1,115 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 40,
-
-  "modules-left": [
-    "memory",
-    "temperature",
-    "cpu",
-	"custom/power",
-  ],
-  "modules-center": [
-    "custom/datetime"
-  ],
-  "modules-right": [
-    "tray",
-    "pulseaudio",
-    "bluetooth",
-    "disk",
-    "network"
-  ],
-  
-  "custom/power": {
-    "exec": "/home/cbhan/.config/waybar/power.sh",
-    "interval": 1,
-    "format": "{}",
-    "tooltip": false
-  },
-
-  "custom/datetime": {
-    "exec": "/home/cbhan/.config/waybar/date.sh",
-    "interval": 1,
-    "format": "{}",
-    "tooltip": false
-  },
-
-  "tray": {
-    "icon-size": 21,
-    "spacing": 10
-  },
-  "memory": {
-    "interval": 1,
-    "format": "󰍛 {percentage:3}%",
-    "states": {
-      "warning": 20,
-      "critical": 50
-    },
-    "tooltip": false
-  },
-  "temperature": {
-    "interval": 1,
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC:3}°C",
-    "format-icons": ["","","","",""],
-    "tooltip": false
-
-  },
-  "cpu": {
-    "interval": 1,
-    "format": "{icon}{usage:3}%",
-    "states": {
-      "warning": 20,
-      "critical": 50
-    },
-    "format-icons": ["󰄛","",""],
-    "tooltip": false
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume:3}%",
-    "format-bluetooth": "{icon} {volume:3}%",
-    "format-muted": " Muted",
-    "format-icons": {
-        "headphone": "",
-        "hands-free": "󱝉",
-        "headset": "󰋍",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
-    },
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"],
-    "tooltip": false
-  },
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": "󰂲 Disabled",
-    "format-connected": "󰂱 {num_connections}",
-    "tooltip": false
-  },
-  "disk": {
-    "interval": 1,
-    "format": " {free}",
-    "path": "/",
-    "tooltip": false
-  },
-  "network": {
-    "interval": 1,
-    "format-wifi": "  {bandwidthTotalBytes:>12}",
-    "format-ethernet": "󰀂 {bandwidthTotalBytes:>12}",
-    "format-disconnected": "󰯡 Disconnected",
-    "tooltip": false
-  }
+	"layer": "top",
+	"position": "top",
+	"height": 40,
+	"modules-left": [
+		"memory",
+		"temperature",
+		"cpu",
+		"custom/power"
+	],
+	"modules-center": [
+		"custom/datetime"
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"bluetooth",
+		"disk",
+		"network"
+	],
+	"custom/power": {
+		"exec": "~/.config/waybar/power.sh",
+		"interval": 1,
+		"format": "{}",
+		"tooltip": false
+	},
+	"custom/datetime": {
+		"exec": "~/.config/waybar/date.sh",
+		"interval": 1,
+		"format": "{}",
+		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"memory": {
+		"interval": 1,
+		"format": "󰍛 {percentage:3}%",
+		"states": {
+			"warning": 20,
+			"critical": 50
+		},
+		"tooltip": false
+	},
+	"temperature": {
+		"interval": 1,
+		"critical-threshold": 80,
+		"format": "{icon} {temperatureC:3}°C",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "{icon}{usage:3}%",
+		"states": {
+			"warning": 20,
+			"critical": 50
+		},
+		"format-icons": [
+			"󰄛",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume:3}%",
+		"format-bluetooth": "{icon} {volume:3}%",
+		"format-muted": " Muted",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "󱝉",
+			"headset": "󰋍",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		],
+		"tooltip": false
+	},
+	"bluetooth": {
+		"format": " {status}",
+		"format-disabled": "󰂲 Disabled",
+		"format-connected": "󰂱 {num_connections}",
+		"tooltip": false
+	},
+	"disk": {
+		"interval": 1,
+		"format": " {free}",
+		"path": "/",
+		"tooltip": false
+	},
+	"network": {
+		"interval": 1,
+		"format-wifi": "  {bandwidthTotalBytes:>12}",
+		"format-ethernet": "󰀂 {bandwidthTotalBytes:>12}",
+		"format-disconnected": "󰯡 Disconnected",
+		"tooltip": false
+	}
 }
